@@ -14,5 +14,7 @@
 
 @property (nonatomic,strong) MMDrawerController * drawerController;
 
+@property (nonatomic, strong) MMNavigationController *centerNav;
+
 @end
 

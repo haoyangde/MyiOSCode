@@ -9,6 +9,8 @@
 #import "MMLeftViewController.h"
 #import "MMCenterViewController.h"
 #import "MMNavigationController.h"
+#import "AppDelegate.h"
+
 @interface MMLeftViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *mainTableView;
@@ -54,10 +56,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MMCenterViewController * center = [[MMCenterViewController alloc] init];
-    center.view.backgroundColor = [UIColor redColor];
-    UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
-    [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:nil];
+    
+    
+    if (indexPath.row == 1) {
+        [self.mm_drawerController setCenterViewController:[(AppDelegate *)[[UIApplication sharedApplication] delegate] centerNav] withCloseAnimation:YES completion:nil];
+    } else {
+        MMCenterViewController * center = [[MMCenterViewController alloc] init];
+        center.view.backgroundColor = [UIColor redColor];
+        UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
+        [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:nil];
+
+    }
 }
 
 @end

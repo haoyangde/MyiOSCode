@@ -25,6 +25,7 @@
     UIViewController * centerViewController = [[MMCenterViewController alloc] init];
     UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:centerViewController];
 
+    self.centerNav = (MMNavigationController *)navigationController;
     self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navigationController leftDrawerViewController:leftSideNavController];
     [self.drawerController setShowsShadow:NO];
     [self.drawerController setRestorationIdentifier:@"MMDrawer"];

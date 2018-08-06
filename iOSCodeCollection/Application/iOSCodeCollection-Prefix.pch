@@ -19,4 +19,6 @@
 #import <MMDrawerController/MMDrawerController+Subclass.h>
 #import <MMDrawerController/MMDrawerVisualState.h>
 
+#import "MMNavigationController.h"
+
 #endif /* iOSCodeCollection_Prefix_pch */
