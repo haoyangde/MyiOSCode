@@ -13,6 +13,7 @@
 		46E69B8B2117E6EB00B52798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E69B8A2117E6EB00B52798 /* Assets.xcassets */; };
 		46E69B8E2117E6EB00B52798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E69B8C2117E6EB00B52798 /* LaunchScreen.storyboard */; };
 		46E69B912117E6EB00B52798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B902117E6EB00B52798 /* main.m */; };
+		46E69B9D2117EDE100B52798 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B9B2117EDE100B52798 /* MMNavigationController.m */; };
 		E0097C566D278094D9E69712 /* libPods-iOSCodeCollection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6B232982B508B2D57C72C /* libPods-iOSCodeCollection.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,9 @@
 		46E69B8D2117E6EB00B52798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E69B8F2117E6EB00B52798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E69B902117E6EB00B52798 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46E69B9A2117EC5100B52798 /* iOSCodeCollection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSCodeCollection-Prefix.pch"; sourceTree = "<group>"; };
+		46E69B9B2117EDE100B52798 /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
+		46E69B9C2117EDE100B52798 /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
 		7554444B52B50E7A6ADD78D6 /* Pods-iOSCodeCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCodeCollection.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCodeCollection/Pods-iOSCodeCollection.release.xcconfig"; sourceTree = "<group>"; };
 		89E7D1E9735B53303A8A9B98 /* Pods-iOSCodeCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCodeCollection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCodeCollection/Pods-iOSCodeCollection.debug.xcconfig"; sourceTree = "<group>"; };
 		F6B6B232982B508B2D57C72C /* libPods-iOSCodeCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSCodeCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +69,15 @@
 		46E69B802117E6EA00B52798 /* iOSCodeCollection */ = {
 			isa = PBXGroup;
 			children = (
+				46E69B972117EB5600B52798 /* Application */,
+				46E69B982117EB5600B52798 /* Modules */,
+			);
+			path = iOSCodeCollection;
+			sourceTree = "<group>";
+		};
+		46E69B972117EB5600B52798 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				46E69B812117E6EA00B52798 /* AppDelegate.h */,
 				46E69B822117E6EA00B52798 /* AppDelegate.m */,
 				46E69B842117E6EA00B52798 /* ViewController.h */,
@@ -74,8 +87,26 @@
 				46E69B8C2117E6EB00B52798 /* LaunchScreen.storyboard */,
 				46E69B8F2117E6EB00B52798 /* Info.plist */,
 				46E69B902117E6EB00B52798 /* main.m */,
+				46E69B9A2117EC5100B52798 /* iOSCodeCollection-Prefix.pch */,
 			);
-			path = iOSCodeCollection;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		46E69B982117EB5600B52798 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				46E69B992117EBD600B52798 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		46E69B992117EBD600B52798 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				46E69B9C2117EDE100B52798 /* MMNavigationController.h */,
+				46E69B9B2117EDE100B52798 /* MMNavigationController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		48F86EDD0972CB2BC9DCD8F6 /* Frameworks */ = {
@@ -207,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E69B862117E6EA00B52798 /* ViewController.m in Sources */,
+				46E69B9D2117EDE100B52798 /* MMNavigationController.m in Sources */,
 				46E69B912117E6EB00B52798 /* main.m in Sources */,
 				46E69B832117E6EA00B52798 /* AppDelegate.m in Sources */,
 			);
@@ -350,7 +382,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSCodeCollection/Info.plist;
+				GCC_PREFIX_HEADER = "iOSCodeCollection/Application/iOSCodeCollection-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/iOSCodeCollection/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,7 +401,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSCodeCollection/Info.plist;
+				GCC_PREFIX_HEADER = "iOSCodeCollection/Application/iOSCodeCollection-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/iOSCodeCollection/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

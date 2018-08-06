@@ -6,3 +6,9 @@ build/
 Index/
 DerivedData
 xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
