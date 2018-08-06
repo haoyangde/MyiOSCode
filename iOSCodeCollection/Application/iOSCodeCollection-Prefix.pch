@@ -14,5 +14,9 @@
 
 #import <Masonry/Masonry.h>
 #import <MMDrawerController/MMDrawerController.h>
+#import <MMDrawerController/MMDrawerBarButtonItem.h>
+#import <MMDrawerController/UIViewController+MMDrawerController.h>
+#import <MMDrawerController/MMDrawerController+Subclass.h>
+#import <MMDrawerController/MMDrawerVisualState.h>
 
 #endif /* iOSCodeCollection_Prefix_pch */
