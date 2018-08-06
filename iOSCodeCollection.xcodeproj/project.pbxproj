@@ -14,6 +14,8 @@
 		46E69B8E2117E6EB00B52798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E69B8C2117E6EB00B52798 /* LaunchScreen.storyboard */; };
 		46E69B912117E6EB00B52798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B902117E6EB00B52798 /* main.m */; };
 		46E69B9D2117EDE100B52798 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B9B2117EDE100B52798 /* MMNavigationController.m */; };
+		46E69BA02117F01800B52798 /* MMLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B9F2117F01800B52798 /* MMLeftViewController.m */; };
+		46E69BA32117F10D00B52798 /* MMCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69BA22117F10D00B52798 /* MMCenterViewController.m */; };
 		E0097C566D278094D9E69712 /* libPods-iOSCodeCollection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6B232982B508B2D57C72C /* libPods-iOSCodeCollection.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		46E69B9A2117EC5100B52798 /* iOSCodeCollection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSCodeCollection-Prefix.pch"; sourceTree = "<group>"; };
 		46E69B9B2117EDE100B52798 /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
 		46E69B9C2117EDE100B52798 /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
+		46E69B9E2117F01800B52798 /* MMLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMLeftViewController.h; sourceTree = "<group>"; };
+		46E69B9F2117F01800B52798 /* MMLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMLeftViewController.m; sourceTree = "<group>"; };
+		46E69BA12117F10D00B52798 /* MMCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCenterViewController.h; sourceTree = "<group>"; };
+		46E69BA22117F10D00B52798 /* MMCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCenterViewController.m; sourceTree = "<group>"; };
 		7554444B52B50E7A6ADD78D6 /* Pods-iOSCodeCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCodeCollection.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCodeCollection/Pods-iOSCodeCollection.release.xcconfig"; sourceTree = "<group>"; };
 		89E7D1E9735B53303A8A9B98 /* Pods-iOSCodeCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCodeCollection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCodeCollection/Pods-iOSCodeCollection.debug.xcconfig"; sourceTree = "<group>"; };
 		F6B6B232982B508B2D57C72C /* libPods-iOSCodeCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSCodeCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +111,10 @@
 			children = (
 				46E69B9C2117EDE100B52798 /* MMNavigationController.h */,
 				46E69B9B2117EDE100B52798 /* MMNavigationController.m */,
+				46E69B9E2117F01800B52798 /* MMLeftViewController.h */,
+				46E69B9F2117F01800B52798 /* MMLeftViewController.m */,
+				46E69BA12117F10D00B52798 /* MMCenterViewController.h */,
+				46E69BA22117F10D00B52798 /* MMCenterViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -154,6 +164,7 @@
 		46E69B762117E6EA00B52798 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MM;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Benson;
 				TargetAttributes = {
@@ -238,9 +249,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E69B862117E6EA00B52798 /* ViewController.m in Sources */,
+				46E69BA32117F10D00B52798 /* MMCenterViewController.m in Sources */,
 				46E69B9D2117EDE100B52798 /* MMNavigationController.m in Sources */,
 				46E69B912117E6EB00B52798 /* main.m in Sources */,
 				46E69B832117E6EA00B52798 /* AppDelegate.m in Sources */,
+				46E69BA02117F01800B52798 /* MMLeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MMLeftViewController.h"
+#import "MMNavigationController.h"
+#import "MMCenterViewController.h"
+#import <MMDrawerController/MMDrawerVisualState.h>
 
 @interface AppDelegate ()
 
@@ -14,9 +18,45 @@
 
 @implementation AppDelegate
 
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
+    UIViewController * leftSideDrawerViewController = [[MMLeftViewController alloc] init];
+    UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
+    UIViewController * centerViewController = [[MMCenterViewController alloc] init];
+    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:centerViewController];
+
+    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navigationController leftDrawerViewController:leftSideNavController];
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [self.drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+//         MMDrawerControllerDrawerVisualStateBlock block;
+//         block = [[MMExampleDrawerVisualStateManager sharedManager]
+//                  drawerVisualStateBlockForDrawerSide:drawerSide];
+//         if(block){
+//             block(drawerController, drawerSide, percentVisible);
+//         }
+     }];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
+                                          green:173.0/255.0
+                                           blue:234.0/255.0
+                                          alpha:1.0];
+    [self.window setTintColor:tintColor];
+    [self.window setRootViewController:self.drawerController];
+
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
