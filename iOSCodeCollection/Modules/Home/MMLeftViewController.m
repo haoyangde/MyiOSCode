@@ -11,10 +11,13 @@
 #import "MMNavigationController.h"
 #import "AppDelegate.h"
 
+#import "MMCoreGraphicsCenterController.h"
+
 @interface MMLeftViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) UIColor *bgColor;
+@property (nonatomic, strong) NSArray *listArray;
 
 @end
 
@@ -22,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.listArray = @[@"CoreGraphics"];
     [self initMainTableView];
 
 }
@@ -40,7 +45,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.listArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,22 +56,32 @@
     }
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = @"哈哈";
+    cell.textLabel.text = [self.listArray objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    if (indexPath.row == 1) {
-        [self.mm_drawerController setCenterViewController:[(AppDelegate *)[[UIApplication sharedApplication] delegate] centerNav] withCloseAnimation:YES completion:nil];
+    NSString *title = [self.listArray objectAtIndex:indexPath.row];
+    UIViewController *center = nil;
+    if ([title isEqualToString:@"CoreGraphics"]) {
+        center = [[MMCoreGraphicsCenterController alloc] init];
+        
     } else {
-        MMCenterViewController * center = [[MMCenterViewController alloc] init];
-        center.view.backgroundColor = [UIColor redColor];
-        UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
-        [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:nil];
-
+        center = [[UIViewController alloc] init];
     }
+    UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
+    [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:nil];
+
+//    if (indexPath.row == 1) {
+//        [self.mm_drawerController setCenterViewController:[(AppDelegate *)[[UIApplication sharedApplication] delegate] centerNav] withCloseAnimation:YES completion:nil];
+//    } else {
+//        MMCenterViewController * center = [[MMCenterViewController alloc] init];
+//        center.view.backgroundColor = [UIColor redColor];
+//        UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
+//        [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:nil];
+//
+//    }
 }
 
 @end

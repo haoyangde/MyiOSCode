@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46AF8C47211ACD2C00683F14 /* MMCoreGraphicsCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AF8C46211ACD2C00683F14 /* MMCoreGraphicsCenterController.m */; };
+		46AF8C4A211AD00B00683F14 /* MMCoreGraphicTriangleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AF8C49211AD00B00683F14 /* MMCoreGraphicTriangleController.m */; };
 		46E69B832117E6EA00B52798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B822117E6EA00B52798 /* AppDelegate.m */; };
 		46E69B862117E6EA00B52798 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E69B852117E6EA00B52798 /* ViewController.m */; };
 		46E69B892117E6EA00B52798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E69B872117E6EA00B52798 /* Main.storyboard */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46AF8C45211ACD2C00683F14 /* MMCoreGraphicsCenterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCoreGraphicsCenterController.h; sourceTree = "<group>"; };
+		46AF8C46211ACD2C00683F14 /* MMCoreGraphicsCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCoreGraphicsCenterController.m; sourceTree = "<group>"; };
+		46AF8C48211AD00B00683F14 /* MMCoreGraphicTriangleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCoreGraphicTriangleController.h; sourceTree = "<group>"; };
+		46AF8C49211AD00B00683F14 /* MMCoreGraphicTriangleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCoreGraphicTriangleController.m; sourceTree = "<group>"; };
 		46E69B7E2117E6EA00B52798 /* iOSCodeCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCodeCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E69B812117E6EA00B52798 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46E69B822117E6EA00B52798 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46AF8C44211ACB9000683F14 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				46AF8C45211ACD2C00683F14 /* MMCoreGraphicsCenterController.h */,
+				46AF8C46211ACD2C00683F14 /* MMCoreGraphicsCenterController.m */,
+				46AF8C48211AD00B00683F14 /* MMCoreGraphicTriangleController.h */,
+				46AF8C49211AD00B00683F14 /* MMCoreGraphicTriangleController.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		46E69B752117E6EA00B52798 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				46E69B992117EBD600B52798 /* Home */,
+				46AF8C44211ACB9000683F14 /* CoreGraphics */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -252,6 +270,8 @@
 				46E69BA32117F10D00B52798 /* MMCenterViewController.m in Sources */,
 				46E69B9D2117EDE100B52798 /* MMNavigationController.m in Sources */,
 				46E69B912117E6EB00B52798 /* main.m in Sources */,
+				46AF8C47211ACD2C00683F14 /* MMCoreGraphicsCenterController.m in Sources */,
+				46AF8C4A211AD00B00683F14 /* MMCoreGraphicTriangleController.m in Sources */,
 				46E69B832117E6EA00B52798 /* AppDelegate.m in Sources */,
 				46E69BA02117F01800B52798 /* MMLeftViewController.m in Sources */,
 			);
