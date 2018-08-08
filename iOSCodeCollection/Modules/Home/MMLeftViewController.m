@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 
 #import "MMCoreGraphicsCenterController.h"
+#import "MMAutoLayoutCenterController.h"
 
 @interface MMLeftViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -26,7 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.listArray = @[@"CoreGraphics"];
+    self.listArray = @[
+                       @"CoreGraphics",
+                       @"AutoLayout"
+                       ];
     [self initMainTableView];
 
 }
@@ -66,7 +70,8 @@
     UIViewController *center = nil;
     if ([title isEqualToString:@"CoreGraphics"]) {
         center = [[MMCoreGraphicsCenterController alloc] init];
-        
+    } else if ([title isEqualToString:@"AutoLayout"]) {
+        center = [[MMAutoLayoutCenterController alloc] init];
     } else {
         center = [[UIViewController alloc] init];
     }
